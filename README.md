@@ -81,17 +81,18 @@ copy .env.example .env
 
 # Edit .env file with your configuration
 # - Set your SECRET_KEY
-# - Configure DATABASE_URL if using PostgreSQL
+# - DATABASE_URL is already configured for PostgreSQL
 # - Update other settings as needed
 ```
 
 ### 3. Run the Application
 
 ```bash
-# Start the development server
-python main.py
+# Start the development server using the batch file (Windows)
+start .\start.bat
 
-# Or use uvicorn directly
+# Or activate virtual environment and use uvicorn directly
+.\venv\Scripts\Activate.ps1
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 

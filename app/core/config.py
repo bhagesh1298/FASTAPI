@@ -9,8 +9,8 @@ class Settings(BaseSettings):
     DEBUG: bool = Field(default=True)
     
     # Database
-    DATABASE_URL: str = Field(default="sqlite:///./test.db")
-    TEST_DATABASE_URL: str = Field(default="sqlite:///./test_test.db")
+    DATABASE_URL: str = Field(default="postgresql://postgres:postgres@localhost:5432/fastapi_db")
+    TEST_DATABASE_URL: str = Field(default="postgresql://postgres:postgres@localhost:5432/fastapi_test_db")
     
     # JWT
     SECRET_KEY: str = Field(default="your-secret-key-change-this-in-production")
